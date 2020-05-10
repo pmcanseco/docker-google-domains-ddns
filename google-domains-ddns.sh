@@ -10,7 +10,8 @@ fi
 
 tr -d '\r' < /config/google-domains-ddns.conf > /tmp/google-domains-ddns.conf
 
-. /tmp/google-domains-ddns.conf
+# commenting this out so that it can just use environment variables
+# . /tmp/google-domains-ddns.conf
 
 if [ -z "$HOSTNAME" ]; then
   echo "HOSTNAME must be defined in google-domains-ddns.conf"
