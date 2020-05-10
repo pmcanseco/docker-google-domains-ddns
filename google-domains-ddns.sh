@@ -1,16 +1,15 @@
 #!/bin/bash
 
-# Search for custom config file, if it doesn't exist, copy the default one
-if [ ! -f /config/google-domains-ddns.conf ]; then
-  echo "Creating config file. Please do not forget to enter your info in google-domains-ddns.conf."
-  cp /root/google-domains-ddns/google-domains-ddns.conf /config/google-domains-ddns.conf
-  chmod a+w /config/google-domains-ddns.conf
-  exit 1
-fi
-
-tr -d '\r' < /config/google-domains-ddns.conf > /tmp/google-domains-ddns.conf
-
 # commenting this out so that it can just use environment variables
+
+# Search for custom config file, if it doesn't exist, copy the default one
+#if [ ! -f /config/google-domains-ddns.conf ]; then
+#  echo "Creating config file. Please do not forget to enter your info in google-domains-ddns.conf."
+#  cp /root/google-domains-ddns/google-domains-ddns.conf /config/google-domains-ddns.conf
+#  chmod a+w /config/google-domains-ddns.conf
+#  exit 1
+#fi
+#tr -d '\r' < /config/google-domains-ddns.conf > /tmp/google-domains-ddns.conf
 # . /tmp/google-domains-ddns.conf
 
 if [ -z "$HOSTNAME" ]; then
